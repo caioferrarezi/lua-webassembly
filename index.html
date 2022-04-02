@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lua Web Assembly</title>
+</head>
+<body>
+  <p></p>
+
+  <script>
+    window.addEventListener('lua-loaded', async ({ detail }) => {
+      const evaluteLuaScript = detail.bootLua()
+
+      const script = await fetch('main.lua').then(res => res.text())
+
+      document.querySelector('p').innerText = evaluteLuaScript(script)
+    })
+  </script>
+
+  <script src="index.js" type="text/javascript"></script>
+  <script src="vm/lua.js" type="text/javascript"></script>
+</body>
+</html>
