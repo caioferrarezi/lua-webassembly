@@ -42,13 +42,12 @@ function bootLua() {
 
     let stackSize = lua_gettop(luaState)
 
-    for (let i = 1; i <= stackSize; i++) {
+    for (let i = 0; i <= stackSize; i++) {
       result += lua_tolstring(luaState, i);
-
-      console.log(result)
     }
 
     lua_settop(luaState, -1, stackSize)
+
     return result
   }
 }

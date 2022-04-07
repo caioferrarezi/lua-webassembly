@@ -15,7 +15,11 @@
 
       const script = await fetch('main.lua').then(res => res.text())
 
-      document.querySelector('p').innerText = evaluteLuaScript(script)
+      const p = document.createElement('p')
+
+      p.innerText = evaluteLuaScript(script)
+
+      document.body.appendChild(p)
     })
   </script>
 
