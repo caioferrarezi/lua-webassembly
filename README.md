@@ -2,13 +2,13 @@
 
 - Clone the repository
 
-- If you want to, make a fresh install of the dependencies:
+- Make a fresh install of the dependencies:
 
-```shell
-make clean
+  ```shell
+  make clean
 
-make install
-```
+  make install
+  ```
 
 - Serve the `index.html` file from a localhost server (I recommend the `live server` extension on `VS Code`)
 

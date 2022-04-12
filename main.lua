@@ -6,4 +6,16 @@ function factorial(n)
   end
 end
 
-return "From Lua: " .. (factorial(5) + factorial(6))
+function main()
+  local html = ''
+
+  html = html .. '<h1>'
+  html = html .. 'Fatorial de 5: ' .. factorial(5)
+  html = html .. '</h1>'
+
+  html = html .. '<h2>'
+  html = html .. 'Fatorial de 6: ' .. factorial(6)
+  html = html .. '</h2>'
+
+  return html
+end
