@@ -3,5 +3,7 @@
 
 luac
 
+vm/
+
 includes/**/*.js
 includes/**/*.wasm
